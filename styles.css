@@ -3,12 +3,13 @@ html {
 }
 
 body {
+    background: linear-gradient(120deg, #f5f7fa, #e4e8f0);
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
 body.dark {
-    background: #121212;
+    background: linear-gradient(120deg, #121212, #1e1e1e);
     color: #eee;
 }
 
@@ -87,6 +88,22 @@ main {
     border-radius: 20px;
     transition: width 1s ease-in-out;
 }
+
+.btn{
+    padding: 12px 25px;
+    border : none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #6e01b8, #b84cff);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} 
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgpa(110, 1, 184, 0.4);
+}
+
 
 body.dark .progress{
     background: #333;
