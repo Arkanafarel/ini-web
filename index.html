@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Arkan Afarel">
+    <title>Arkan Afarel</title>
+
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        body.dark{
+            background: #121212;
+            color: #eee;
+        }
+
+        body.dark section{
+            background: #1e1e1e;
+        }
+
+        .top-bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        header {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+    
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: -5px;
+            background: #6e01b8;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #6e01b8;
+        }
+
+        nav a:hover::after {
+            color: #6e01b8;
+        }
+
+        main {
+            max-width: 800px;
+            margin: auto;
+        }
+    
+        section{
+            margin-bottom: 30px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    
+        footer{
+            border-top: 1px solid #000000;
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 600px){
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            
+        }
+    }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+    <header>
+        <div class="top-bar">
+            <div>
+                <h1>Arkan Afarel</h1>
+                <p>My name is Arkan Afarel, I am a student in Information Systems</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li> <a href="#skills">Skill</a></li>
+                    <li> <a href="#education">Education</a></li>
+                    <li> <a href="#contact-me">Contact me</a></li>
+                </ul>
+            </nav>
+       </div>
+    </header>
+    <main>
+        <section id="skills">
+            <h2>Skill</h2>
+            <p>I have skills in UI/UX design using Figma and Adobe XD.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>I am an Information Systems student..</p>    
+        </section>
+        <section id="contact-me">
+            <h2>Contact me</h2>
+            <p>If you need me just call me.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Arkan Afarel 2026</p>
+    </footer>
+</body>
+</html>
