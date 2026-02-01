@@ -18,10 +18,22 @@ body.dark section {
 }
 
 .top-bar {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     justify-content: space-between;
     align-items: center;
 }
+
+.top-bar h1{
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.top-bar > div:first-child {
+    max-width: 240px;
+}
+
 
 header {
     position: sticky;
