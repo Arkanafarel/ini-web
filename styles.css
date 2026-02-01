@@ -25,18 +25,38 @@ body.dark section {
 
 header {
     position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.6);   
+    top: 15px;
+    width: 85%;
+    margin: auto;
+    padding: -20px;
+    border-radius: 100px;
+    
+    display: flex;
+    justify-content: center;
+    
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    
     z-index: 1000;
-    padding: 5px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
+    
 }
 
 body.dark header {
-    background: rgba(18,18,18, 0.6);
+    background: rgba(18, 18, 18, 0.55);
 }
+
+#typing::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 
 nav ul {
     display: flex;
@@ -79,23 +99,7 @@ main {
     gap: 25px;
 }
 
-.skills{
-    margin-bottom: 15px;
-}
 
-.progress{
-    background: #ddd;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.progress-bar{
-    height: 10px;
-    background: linear-gradient(90deg, #6e01b8, #b84cff);
-    width: 0;
-    border-radius: 20px;
-    transition: width 1s ease-in-out;
-}
 
 .btn{
     padding: 12px 25px;
@@ -118,15 +122,17 @@ body.dark .progress{
 }
 
 section {
+    opacity: 0;
+    transform: translateY(20px);
     margin: 40px 0;
     padding: 25px;
     margin-bottom: 30px;
     background: #ffffff;
     border-radius: 14px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);;
 }
-    
+
 section:hover {
     transform: translate(-5px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
