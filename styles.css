@@ -26,11 +26,16 @@ body.dark section {
 header {
     position: sticky;
     top: 0;
-    background: white;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.6);   
     z-index: 1000;
-    padding: 10px;
+    padding: 5px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
+}
+
+body.dark header {
+    background: rgba(18,18,18, 0.6);
 }
 
 nav ul {
@@ -67,8 +72,11 @@ nav a:hover {
 }
 
 main {
-    max-width: 800px;
-    margin: auto;
+    max-width: 1100px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .skills{
@@ -111,14 +119,14 @@ body.dark .progress{
 
 section {
     margin: 40px 0;
-    padding: 30px;
+    padding: 25px;
     margin-bottom: 30px;
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 14px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);;
 }
-
+    
 section:hover {
     transform: translate(-5px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
