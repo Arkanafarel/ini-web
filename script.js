@@ -1,56 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Fungsi Typing Effect tetap sama
     const text = "Arkan Afarel";
-    const typingSpeed =150;
-    const deletingSpeed = 100;
-    const delayAfterTyping = 3000;
-
+    const target = document.getElementById("typing");
     let i = 0;
     let isDeleting = false;
-    const target = document.getElementById("typing");
 
     function typeLoop() {
-        if (!isDeleting) {
-            // NGETIK
-            target.innerHTML = text.substring(0, i + 1);
-            i++;
-            if (i === text.length) {
-                setTimeout(() => isDeleting = true, delayAfterTyping);
-            }
-        } else {
-            // MENGHAPUS
-            target.innerHTML = text.substring(0, i - 1);
-            i--;
-            if (i === 0) {
-                isDeleting = false;
-            }
-        }
+        target.innerHTML = isDeleting ? text.substring(0, i - 1) : text.substring(0, i + 1);
+        isDeleting ? i-- : i++;
+        if (!isDeleting && i === text.length) setTimeout(() => isDeleting = true, 3000);
+        if (isDeleting && i === 0) isDeleting = false;
+        setTimeout(typeLoop, isDeleting ? 100 : 150);
+    }
+    typeLoop();
 
-        setTimeout(typeLoop, isDeleting ? deletingSpeed : typingSpeed);
+    // Fungsi Reveal yang diperbaiki agar langsung mengecek posisi saat dimuat
+    const reveals = document.querySelectorAll(".reveal");
+    function revealOnScroll() {
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 50) {
+                el.classList.add("active");
+            }
+        });
     }
 
-    typeLoop();
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Panggil sekali saat start agar konten atas langsung muncul
 });
 
-
-
-const btn = document.getElementById("toggle-dark");
-
-btn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-});
-
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-
-        if (elementTop < windowHeight - 100) {
-            el.classList.add("active");
-        }
-    });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-
+window.addEventListener("load", revealOnScroll);

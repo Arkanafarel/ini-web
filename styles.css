@@ -3,18 +3,32 @@ html {
 }
 
 body {
-    background: linear-gradient(120deg, #f5f7fa, #e4e8f0);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-}
-
-body.dark {
-    background: linear-gradient(120deg, #121212, #1e1e1e);
+    background: linear-gradient(120deg, #181818, #202020);
     color: #eee;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
 }
 
-body.dark section {
-    background: #1e1e1e;
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    width: 100%;
+}
+
+header {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 999px;
+    padding: 2px 0;
+    background: rgba(18, 18, 18, 0.55);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
 .top-bar {
@@ -22,68 +36,16 @@ body.dark section {
     justify-content: space-between;
     align-items: center;
     padding: 0px 24px;
-    min-height: 32px;
+    min-height: 50px;
 }
 
 .top-bar h1 {
-    font-size: 1.5rem; 
-    margin: 0;         
-}
-
-.top-bar > div:first-child {
-    margin-left: 20px;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px; /* Jarak antara header dan tombol */
-    position: sticky;
-    top: 20px;
-    z-index: 1000;
-    width: 90%; /* Sesuaikan lebar agar ada ruang untuk tombol */
-    margin: auto;
-}
-
-.floating-dark-btn {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 10px 15px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-header {
-    position: sticky;
-    top: 20px;
-    width: 78%;
-    margin: auto;
-
-    border-radius: 999px;
-    padding: 2px 0;
-
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.6),
-        0 8px 30px rgba(0,0,0,0.08);
-
-    z-index: 1000;
-}
-
-body.dark header {
-    background: rgba(18, 18, 18, 0.55);
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #typing::after {
-    font-family: 'Montserat', ;
     content: "|";
     animation: blink 1s infinite;
 }
@@ -94,20 +56,20 @@ body.dark header {
     100% {opacity: 1;}
 }
 
-
 nav ul {
-    margin-right: 30px;
     display: flex;
     gap: 30px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #eee;
     font-weight: 500;
     position: relative;
+    transition: color 0.3s;
 }
 
 nav a::after {
@@ -126,64 +88,110 @@ nav a:hover::after {
 }
 
 nav a:hover {
-    color: #6e01b8;
+    color: #b84cff;
 }
 
 main {
-    max-width: 1100px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column; /* Membuat card berurutan ke bawah */
+    gap: 30px;
 }
 
+.profile-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 100px;
+    max-width: 700px;
+    padding: 30px;
+}
 
+.profile-card:hover {
+    transform: translateY(-5px);
+}
 
-.btn{
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-content h2 {
+    color: #b84cff;
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #6e01b8;
+    box-shadow: 0 10px 20px rgba(110, 1, 184, 0.3);
+}
+
+.skill p i {
+    margin-right: 10px;
+    color: #b84cff;
+}
+
+.progress {
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #6e01b8, #b84cff);
+    height: 100%;
+}
+
+.btn {
     padding: 12px 25px;
-    border : none;
+    border: none;
     border-radius: 30px;
     background: linear-gradient(90deg, #6e01b8, #b84cff);
     color: white;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-} 
-
-.btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgpa(110, 1, 184, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-
-body.dark .progress{
-    background: #333;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(110, 1, 184, 0.4);
 }
 
 section {
-    opacity: 0;
-    transform: translateY(20px);
-    margin: 40px 0;
-    padding: 25px;
-    margin-bottom: 30px;
-    background: #ffffff;
-    border-radius: 14px;
-    transition: transform 0.6s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);;
+    background: transparent;
+    padding: 30px;
+    border: none;
+    box-shadow: none;
 }
 
 section:hover {
-    transform: translate(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-body.dark section {
-    background: #1e1e1e;
+    transform: translateY(-5px);
 }
 
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
 }
 
 .reveal.active {
@@ -191,21 +199,54 @@ body.dark section {
     transform: translateY(0);
 }
 
-footer {
-    border-top: 1px solid #000;
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
     text-align: center;
-    margin-top: 40px;
-    padding-top: 10px;
 }
 
-@media (max-width: 600px) {
-    .top-bar {
+.skill-item i {
+    font-size: 3rem; /* Memperbesar ukuran ikon */
+    margin-bottom: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.2); /* Efek zoom saat kursor di atas ikon */
+}
+
+.skill-item p {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+footer {
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
+    }
+    
+    header {
+        width: 95%;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
+}
+
+#skills,
+#education,
+#contact-me {
+    padding-top: 200px;
 }
