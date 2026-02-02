@@ -236,9 +236,6 @@ section:hover {
 
 .skill-item i:hover {
     transform: scale(1.3);
-    text-shadow: 0 0 5px #AA1111,
-                 0 0 5px #AA1111,
-                 0 0 5px #AA1111 
 }
 
 
