@@ -1,3 +1,5 @@
+// alert("Welcome to my website! click OK to continue");
+
 document.addEventListener("DOMContentLoaded", function () {
     // Fungsi Typing Effect tetap sama
     const text = "Arkan Afarel";

@@ -99,6 +99,7 @@ main {
     gap: 30px;
 }
 
+
 .profile-card {
     background: transparent;
     border: none;
@@ -110,7 +111,7 @@ main {
 }
 
 .profile-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.03);
 }
 
 .profile-content {
@@ -131,7 +132,7 @@ main {
 }
 
 .profile-image {
-    width: 45%;
+    width: 40%;
     display: flex;
     justify-content: flex-end;   /* ⬅️ kunci ke kanan */
     padding-right: 150px;
@@ -141,6 +142,10 @@ main {
     width: 340px;
     height: auto;
     object-fit: contain;
+}
+
+.profile-image img:hover {
+    transform: scale(1.15);
 }
 
 
@@ -170,7 +175,7 @@ main {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: scale(1.2);
     box-shadow: #d60e0e;
 }
 
@@ -182,7 +187,7 @@ section {
 }
 
 section:hover {
-    transform: translateY(-5px);
+    transform: scale(1.3);
 }
 
 .reveal {
@@ -196,6 +201,13 @@ section:hover {
     transform: translateY(0);
 }
 
+.figma-icon{
+    background: linear-gradient(180deg,#F24E1E,#FF7262,#A259FF,#1ABCFE,#0ACF83);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -205,20 +217,24 @@ section:hover {
 }
 
 .skill-item i {
-    font-size: 3rem; /* Memperbesar ukuran ikon */
+    font-size: 120px;
     margin-bottom: 10px;
     display: block;
     transition: transform 0.3s ease;
-}
-
-.skill-item:hover i {
-    transform: scale(1.2); /* Efek zoom saat kursor di atas ikon */
 }
 
 .skill-item p {
     font-weight: bold;
     font-size: 0.9rem;
 }
+
+.skill-item i:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 5px #AA1111,
+                 0 0 5px #AA1111,
+                 0 0 5px #AA1111 
+}
+
 
 footer {
     border-top: 1px solid #eeeeee;
