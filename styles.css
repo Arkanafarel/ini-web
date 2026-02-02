@@ -172,16 +172,25 @@ main {
     color: #AA1111;
 }
 
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
 .btn {
-    padding: 12px 25px;
+    padding: 0px 30px;
     border: none;
     background: #AA1111;
     color: white;
     transition: transform 0.3s, box-shadow 0.5s;
 }
 
+.btn h3 {
+    font-family: 'inter', sans-serif;
+}
+
 .btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: #d60e0e;
 }
 
@@ -238,6 +247,24 @@ section:hover {
     transform: scale(1.3);
 }
 
+.portofolio-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 300px; /* jarak antar card */
+}
+
+
+portofolio-content {
+    flex: 1; /* biar lebarnya rata */
+    padding: 30px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    text-align: center;
+}
 
 footer {
     border-top: 1px solid #3f3f3f;
