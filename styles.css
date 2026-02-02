@@ -79,7 +79,7 @@ nav a::after {
     height: 2px;
     left: 0;
     bottom: -5px;
-    background: #6e01b8;
+    background: #AA1111;
     transition: width 0.3s ease;
 }
 
@@ -88,7 +88,7 @@ nav a:hover::after {
 }
 
 nav a:hover {
-    color: #b84cff;
+    color: #AA1111;
 }
 
 main {
@@ -124,7 +124,9 @@ main {
 
 
 .profile-content h2 {
-    color: #b84cff;
+    background: #AA1111;
+    width: fit-content;
+    padding: 5px;
     margin-bottom: 15px;
 }
 
@@ -150,41 +152,26 @@ main {
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 10px 40px;
 }
 
 
 .skill p i {
     margin-right: 10px;
-    color: #b84cff;
-}
-
-.progress {
-    background: #333;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 5px;
-}
-
-.progress-bar {
-    background: linear-gradient(90deg, #6e01b8, #b84cff);
-    height: 100%;
+    color: #AA1111;
 }
 
 .btn {
     padding: 12px 25px;
     border: none;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #6e01b8, #b84cff);
+    background: #AA1111;
     color: white;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.5s;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(110, 1, 184, 0.4);
+    box-shadow: #d60e0e;
 }
 
 section {
@@ -234,7 +221,7 @@ section:hover {
 }
 
 footer {
-    border-top: 1px solid #333;
+    border-top: 1px solid #eeeeee;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
