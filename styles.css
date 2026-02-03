@@ -256,21 +256,24 @@ section:hover {
   }
   
   .education-list {
+    justify-content: center;
     display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
   
   .education-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
+    text-align: center;
   }
   
   .education-item img {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
+    margin-bottom: 16px;
   }
   
   .education-text h3 {
@@ -287,6 +290,13 @@ section:hover {
     font-size: 0.85rem;
     color: #aaa;
   }
+
+  @media (max-width: 768px) {
+    .education-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 
 .portofolio-wrapper {
     display: flex;
