@@ -75,26 +75,55 @@
         <section id="portofolio" class="reveal">
             <h2>Portofolio</h2>
             <div class="portofolio-wrapper">
-                <div class="portofolio-content">
+                <div class="portofolio-content"
+                data-img="poster1.jpg"
+                data-title="Distorted Reality"
+                data-desc="Visual exploration with distortion and perception.">
+
                     <div class="poster">
                         <img src="poster glass theme.jpeg" alt="project 1">
                     </div>
                     <p>Coming soon...</p>
                 </div>
-                <div class="portofolio-content">
+                
+                <div class="portofolio-content"
+                data-img="poster2.jpg"
+                data-title="Monochrome Stories"
+                data-desc="Minimalist black & white visual storytelling.">
+
                     <div class="poster">
                         <img src="poster monochrome theme.jpeg" alt="project 2">
                     </div>
                     <p>Coming soon...</p>
                 </div>
-                <div class="portofolio-content">
+
+                <div class="portofolio-content"
+                data-img="poster3.jpg"
+                data-title="Porsche Speedster"
+                data-desc="Automotive visual design with premium mood.">
+
                     <div class="poster">
                         <img src="poster porche .jpeg" alt="project 3">
                     </div>
                     <p>Coming soon...</p>
                 </div>
             </div>
+            
         </section>
+
+        <div class="modal" id="portfolioModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+            
+                <div class="modal-body">
+                    <img id="modalImg" src="" alt="">
+                    <div class="modal-text">
+                        <h3 id="modalTitle"></h3>
+                        <p id="modalDesc"></p>
+                    </div>
+                </div>
+            </div>            
+        </div>
 
         <div class="contact">
             <button class="btn"><h3>Contact me</h3></button>
