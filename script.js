@@ -58,6 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
             modalImg.src = card.dataset.img;
             modalTitle.textContent = card.dataset.title;
             modalDesc.textContent = card.dataset.desc;
+            modalDesc.style.whiteSpace = "pre-line";
+            modalDesc.style.textAlign = "left";
+
         });
     });
 
