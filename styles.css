@@ -250,20 +250,36 @@ section:hover {
 .portofolio-wrapper {
     display: flex;
     justify-content: center;
-    gap: 300px; /* jarak antar card */
+    gap: 50px; /* jarak antar card */
 }
 
 
-portofolio-content {
-    flex: 1; /* biar lebarnya rata */
-    padding: 30px;
-    border-radius: 16px;
+.portofolio-content {
+    width: 300px;
+    height: 350px; 
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
 
     color: white;
     text-align: center;
+}
+
+.poster{
+    width: 100%;
+    height: 360px;
+    overflow: hidden;   /* PENTING */
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 footer {
@@ -348,7 +364,7 @@ footer {
 }
 
 .footer-nav a:hover {
-    color: #fff;
+    color:  #AA1111;
 }
 
 @media (max-width: 768px) {
