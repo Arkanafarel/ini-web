@@ -238,13 +238,13 @@ section:hover {
     transition: transform 0.3s ease;
 }
 
+.skill-item i:hover {
+    transform: scale(1.3);
+}
+
 .skill-item p {
     font-weight: bold;
     font-size: 0.9rem;
-}
-
-.skill-item i:hover {
-    transform: scale(1.3);
 }
 
 .portofolio-wrapper {
@@ -262,12 +262,16 @@ section:hover {
     flex-direction: column;
     gap: 15px;
 
-
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
 
     color: white;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portofolio-content:hover {
+    transform: scale(1.1);
 }
 
 .poster{
