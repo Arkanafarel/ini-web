@@ -72,3 +72,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+const items = document.querySelectorAll('.portfolio-content');
+const popup = document.getElementById('popup');
+const popupImg = document.getElementById('popup-img');
+const popupTitle = document.getElementById('popup-title');
+const popupDesc = document.getElementById('popup-desc');
+const closeBtn = document.querySelector('.close');
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    popupImg.src = item.dataset.img;
+    popupTitle.textContent = item.dataset.title;
+    popupDesc.textContent = item.dataset.desc;
+
+    popup.classList.add('active');
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  popup.classList.remove('active');
+});
