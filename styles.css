@@ -109,10 +109,9 @@ main {
     background: transparent;
     border: none;
     box-shadow: none;
-    margin-top: 20px;
     width: 100%;
     padding: 80px 120px;   /* ruang kiri kanan */
-    padding: 30px;
+    padding: 10px;
 }
 
 .profile-card:hover {
@@ -133,7 +132,7 @@ main {
     background: #AA1111;
     width: fit-content;
     padding: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .profile-image {
@@ -162,7 +161,6 @@ main {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 0 auto;
     padding: 10px 40px;
 }
 
@@ -481,5 +479,5 @@ footer {
 #skills,
 #education,
 #contact-me {
-    padding-top: 200px;
+    padding-top: 10px;
 }
