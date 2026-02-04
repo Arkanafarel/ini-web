@@ -596,6 +596,42 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .profile-content,
+    .profile-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-image {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .profile-image img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-content,
+    .profile-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-image {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .profile-image img {
+        width: 250px;
+    }
+}
+
+
+
 
 #skills,
 #education,
