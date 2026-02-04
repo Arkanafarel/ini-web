@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalImg = document.getElementById("modalImg");
     const modalTitle = document.getElementById("modalTitle");
     const modalDesc = document.getElementById("modalDesc");
-    const closeBtn = document.querySelector(".close");
+    const closePortfolio = modal.querySelector(".close");
 
     document.querySelectorAll(".portofolio-content").forEach(card => {
         card.addEventListener("click", () => {
@@ -60,11 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
             modalDesc.textContent = card.dataset.desc;
             modalDesc.style.whiteSpace = "pre-line";
             modalDesc.style.textAlign = "left";
-
         });
     });
 
-    closeBtn.addEventListener("click", () => {
+    closePortfolio.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
@@ -74,26 +73,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-});
 
+    /* ===== CONTACT POPUP (BUKAN MODAL) ===== */
+    const contactPopup = document.getElementById("contactPopup");
+    const contactBtn = document.querySelector(".btn");
+    const closeContact = document.getElementById("closeContact");
 
-const items = document.querySelectorAll('.portfolio-content');
-const popup = document.getElementById('popup');
-const popupImg = document.getElementById('popup-img');
-const popupTitle = document.getElementById('popup-title');
-const popupDesc = document.getElementById('popup-desc');
-const closeBtn = document.querySelector('.close');
+    contactBtn.addEventListener("click", () => {
+        contactPopup.style.display = "flex";
+    });
 
-items.forEach(item => {
-  item.addEventListener('click', () => {
-    popupImg.src = item.dataset.img;
-    popupTitle.textContent = item.dataset.title;
-    popupDesc.textContent = item.dataset.desc;
+    closeContact.addEventListener("click", () => {
+        contactPopup.style.display = "none";
+    });
 
-    popup.classList.add('active');
-  });
-});
+    contactPopup.addEventListener("click", (e) => {
+        if (e.target === contactPopup) {
+            contactPopup.style.display = "none";
+        }
+    });
 
-closeBtn.addEventListener('click', () => {
-  popup.classList.remove('active');
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            contactPopup.style.display = "none";
+        }
+    });
+
 });
