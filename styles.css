@@ -747,3 +747,37 @@ footer {
   }
 }
 
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+  
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 5px;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: #111;
+      padding: 15px 25px;
+      border-radius: 15px;
+      flex-direction: column;
+      gap: 15px;
+      display: none;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
